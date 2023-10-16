@@ -657,6 +657,7 @@ endmenu
 	source "package/wipe/Config.in"
 	source "package/xorriso/Config.in"
 	source "package/xr819-xradio/Config.in"
+	source "package/greenpak-programmer/Config.in"
 endmenu
 
 menu "Interpreter languages and scripting"

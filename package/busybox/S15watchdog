@@ -5,8 +5,12 @@
 
 case "$1" in
  start)
-	echo "Starting watchdog..."
-	watchdog -t PERIOD /dev/watchdog
+	for dev in /dev/watchdog?*; do
+		if [ -c $dev ]; then
+			echo "Starting ${dev}..."
+			watchdog -t PERIOD $dev
+		fi
+	done
 	;;
   stop)
 	;;
